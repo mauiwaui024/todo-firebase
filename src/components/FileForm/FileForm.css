@@ -1,0 +1,20 @@
+.fileFormContainer {
+  color: #fff;
+}
+.fileFormContainer input {
+  background-color: transparent;
+  cursor: pointer;
+}
+.fileFormContainer input::file-selector-button {
+  background-color: transparent;
+  color: yellowgreen;
+  border: 2px solid #fff;
+  height: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.fileFormContainer input::file-selector-button:hover {
+  color: black;
+  background-color: yellow;
+}
+/*# sourceMappingURL=FileForm.css.map */

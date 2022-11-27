@@ -9,12 +9,12 @@ import {getStorage} from "firebase/storage"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAb4yqcHWhZTT-8XZaFdYh52qI__EA_A7M",
-  authDomain: "todo-app-bf73c.firebaseapp.com",
-  projectId: "todo-app-bf73c",
-  storageBucket: "todo-app-bf73c.appspot.com",
-  messagingSenderId: "855101553133",
-  appId: "1:855101553133:web:e9013f70551c1d4c410fe4"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET_APP_ID
 };
 // Initialize Cloud Firestore and get a reference to the service
 

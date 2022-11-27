@@ -1,0 +1,30 @@
+.formContainer {
+  width: 30%;
+  margin: 0 auto;
+}
+.formContainer .myForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
+}
+.formContainer input {
+  width: 100%;
+  margin-bottom: 10px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 15px;
+}
+.formContainer label {
+  color: #fff;
+}
+.formContainer button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.formContainer input::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+/*# sourceMappingURL=TodoForm.css.map */

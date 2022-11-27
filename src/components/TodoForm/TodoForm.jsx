@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import styles from "./TodoForm.module.css"
 import { collection, addDoc } from 'firebase/firestore'
 import {db} from "../../firebase"
 import { Timestamp } from 'firebase/firestore';
+import  "./TodoForm.css"
+
 
 function TodoForm() {
 
@@ -18,6 +19,10 @@ function TodoForm() {
   //добавляем запись в туду
   const addTodo = async(e) =>{
     e.preventDefault()
+    if(title===""| desc === "" | date === ""){
+      alert ("Введите данные во все инпуты")
+      return
+    }
     await addDoc(collection(db, "todos"),{
       title: title,
       completed: false,
@@ -29,13 +34,16 @@ function TodoForm() {
   
 
   return (
-    <form onSubmit={addTodo} className={styles.myform}>
+    <div className="formContainer">
+    <form onSubmit={addTodo} className="myForm">
       <input value={title} onChange={(e)=>setTitle(e.target.value)} type="text" placeholder='введите название задачи'/>
       <input value={desc} onChange={(e)=>setDesc(e.target.value)}  type="text" placeholder='введите описание задачи'/>
-      <input value={date} onChange={(e)=>setDate(e.target.value)} type="datetime-local" />
+      <label for="time">Выполнить до:</label>
+      <input id="#time" value={date} onChange={(e)=>setDate(e.target.value)} type="datetime-local" />
       {/* <input value={time} onChange={(e)=>setTime(e.target.value)} type="time" /> */}
-      <button>добавить todo</button>
+      <button className="red">ДОБАВИТЬ TODO</button>
     </form>
+    </div>
   )
 }
 
